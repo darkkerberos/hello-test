@@ -1,0 +1,11 @@
+syntax="proto3";
+
+package grpc;
+
+message StringMessage {
+    string value = 1;
+}
+ 
+service HelloTest {
+    rpc SayHello(StringMessage) returns (StringMessage) {}
+}
